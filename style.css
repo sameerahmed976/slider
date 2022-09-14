@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* Typography */
+  --regular-font: "Lato", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  --heading-font: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    monospace, sans-serif;
+
+  /* h5 font size paragraph */
+
+  /* start of for mobile */
+
+  --font-size-s-h1: 3.052rem;
+
+  --font-size-s-h2: 2.441rem;
+
+  --font-size-s-h3: 1.953rem;
+
+  --font-size-s-h4: 1.563rem;
+
+  --font-size-s-h5: 1.25rem;
+  /* major third 1.250 */
+  --font-size-s-h6: 1rem;
+  /* end of for mobile */
+
+  --line-height: 1.75;
+
+  --box-shadow-1: 2px 4px 10px rgb(255, 255, 255);
+
+  --transition-8: all 0.8s ease-in-out;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--regular-font);
+  font-size: 1 6px;
+  background-color: whitesmoke;
+  animation: slide 0.8s ease normal 1;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0deg);
+  }
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.image {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  margin: 0 auto;
+  vertical-align: middle;
+  border-radius: 10%;
+  box-shadow: 2px 4px 2px #fff;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 300px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.card-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.heading {
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 3px 2px #000;
+  text-transform: uppercase;
+  padding: 1rem;
+  color: limegreen;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.4rem;
+  text-transform: capitalize;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: transparent;
+  color: black;
+  cursor: pointer;
+  transition: var(--transition-8);
+  box-shadow: var(--box-shadow-1);
+}
+
+.btn:hover {
+  color: green;
+}
+
+.btn i {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-left {
+  left: 10%;
+}
+
+.btn-right {
+  left: 90%;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  height: 500px;
+}
+
+.card {
+  position: absolute;
+  padding: 1.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: var(--box-shadow-1);
+  border-radius: 2rem;
+}
+
+.card-heading {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.card-paragraph {
+  text-transform: lowercase;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding-bottom: 1rem;
+}
+
+.active {
+  transition: all 1s ease-in-out;
+  transform: translateX(0%);
+}
+
+.next {
+  transition: all 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.last {
+  transition: all 1s ease-in-out;
+  transform: translateX(100%);
+}
