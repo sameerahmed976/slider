@@ -25,24 +25,24 @@ sliderContainer.innerHTML = data
 let index = 0;
 
 buttonLeft.addEventListener("click", () => {
-  console.log("click");
+  //   console.log("click");
   index++;
   if (index > 1) {
     index = 1;
   }
 
-  console.log(index);
+  //   console.log(index);
 
   sliderContainer.style.transform = `translateX(${index}00%)`;
   sliderContainer.style.transition = `all 1s ease-in-out`;
 });
 buttonRight.addEventListener("click", () => {
-  console.log("click");
+  //   console.log("click");
   index--;
   if (index < -1) {
     index = -1;
   }
-  console.log(index);
+  //   console.log(index);
 
   sliderContainer.style.transform = `translateX(${index}00%)`;
   sliderContainer.style.transition = `all 1s ease-in-out`;
